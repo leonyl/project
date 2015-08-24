@@ -67,7 +67,8 @@ get_header(); ?>
 		<?php 
 				$query = new WP_Query(array(
 						                  'post_type' => 'our_thinking',
-						                  'order' => 'ASC'
+						                  'order' => 'ASC',
+						                  'posts_per_page' => 8
 						                  ));
 
 				if ( $query->have_posts() ) : 
@@ -93,7 +94,7 @@ get_header(); ?>
 
                 $query = new WP_Query(array(
 					                  'post_type' => 'what_we_do',
-					                  'limit' => 1,
+					                  'posts_per_page' => 1,
 					                  'order' => 'ASC'
 					                  ));
 

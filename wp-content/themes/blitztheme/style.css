@@ -1071,17 +1071,19 @@ a,a:active,a:hover,a:visited{
 	
 }
 .link_posts_left{
-	background-image: url('images/linked-post-bg.png');
+	background-image: url('images/left.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	height: 210px;
 	//box-shadow: 0px 5px 9px 2px #6aa;
-	border-right: 1px solid #aaa;
+	/*border-right: 1px solid #aaa;*/
 }
 .link_posts_left span{
 	font-size: 20px;
 	color: #fff;
 }
 .link_posts_left h1{
-	background-image: url('images/prev.png');
+	background-image: url('images/left.jpg');
 	background-repeat: no-repeat;
 	background-size: 60px;
 	background-position: 10px 50px; 
@@ -1093,8 +1095,9 @@ a,a:active,a:hover,a:visited{
 	padding-left: 20px;
 }
 .link_posts_right{
-	background-image: url('images/linked-post-bg.png');
+	background-image: url('images/right.jpg');
 	height: 210px;
+	background-size: 100% 100%;
 	//box-shadow: 0px 5px 9px 2px #6aa;
 	//border-left: 3px outset #6aa;
 }
@@ -1333,4 +1336,15 @@ a,a:active,a:hover,a:visited{
 }
 .pots-title{
 	text-transform: uppercase !important;
+}
+.what-we-do img{
+	width: 100%;
+	height: auto;
+}
+.also-explore>h1, .also-explore h4,.also-explore h5 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.also-explore p{
+	font-size: 10px;
 }

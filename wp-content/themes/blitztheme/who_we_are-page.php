@@ -201,11 +201,11 @@ get_header(); ?>
                       //$active = ($ctr == 0)? 'active' : '';
                       echo '<div class="col-md-8 nopadding revitalize" > 
 		                          <div class="col-md-12 map">
-		                          	'. get_the_content()/*//get_the_content()*/.'      
+		                          	'. get_the_content().'
 		                          </div>
 	                            <div class="col-md-12">
-			                          <h1 class="text-center pots-title">'.get_the_title().'</h1>
-			                              
+			                          <h1 class="text-center pots-title">' .get_the_title().'</h1>
+			                             
 		                          </div>
 		                      </div>';
 
@@ -215,9 +215,79 @@ get_header(); ?>
                 wp_reset_postdata();
 
            ?>
-     
 
+	</div>
 
+	<div class="row">
+		<div class="col=md-12 also-explore">
+			<h1>Also Explore</h1>
+			<div class="col-md-4 nopadding">
+			<?php	
+		        $query = new WP_Query(array(
+	        					 'post_type' => 'what_we_do',
+				                  'name' => 'what-we-do',
+				                  ));
+
+					if ( $query->have_posts() ) : 
+						 $ctr = 0;
+		                  while ( $query->have_posts() ) : $query->the_post();  
+		                      $image = '';  
+		                      if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+		                         $image = get_the_post_thumbnail();
+		                      }  
+		                      //$active = ($ctr == 0)? 'active' : '';
+		                      echo '<div class="col-md-8 what-we-do nopadding ">
+				                          	'. $image /*//get_the_content()*/.'      
+				                          </div>
+			                            <div class="col-md-4">
+					                          <h4>'.get_the_title().'</h4>
+					                             <p> '.get_the_excerpt().'</p>
+				                          </div>';
+
+		                  		$ctr++;   
+		                  endwhile;   
+		                endif; 
+	                wp_reset_postdata();
+
+		           ?>
+
+			</div>
+			<div class="col-md-4 nopadding">
+				<?php	
+		        $query = new WP_Query(array(
+	        					 'post_type' => 'our_thinking',
+				                  'name' => 'our-thinking',
+				                  ));
+
+					if ( $query->have_posts() ) : 
+						 $ctr = 0;
+		                  while ( $query->have_posts() ) : $query->the_post();  
+		                      $image = '';  
+		                      if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+		                         $image = get_the_post_thumbnail();
+		                      }  
+		                      //$active = ($ctr == 0)? 'active' : '';
+		                      echo '<div class="col-md-8 what-we-do nopadding ">
+				                          	'. $image /*//get_the_content()*/.'      
+				                          </div>
+			                            <div class="col-md-4">
+					                          <h5>'.get_the_title().'</h5>
+					                              <p>'.get_the_excerpt().'</p>
+				                          </div>';
+
+		                  		$ctr++;   
+		                  endwhile;   
+		                endif; 
+	                wp_reset_postdata();
+
+		           ?>
+
+			</div>
+			<div class="col-md-4">
+				
+				
+			</div>
+		</div>
 	</div>
 </div>
 <?php get_footer(); ?>

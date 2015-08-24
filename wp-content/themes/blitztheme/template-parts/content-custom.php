@@ -103,11 +103,11 @@
 		
 				<div class="col-md-12 nopadding"></div>
 				
-				<div class="col-md-6 link_posts_left"><a href=""><h1><span>prev page here</span></h1></a></div>
-				<div class="col-md-6 link_posts_right"><a href=""><h1><span>next page here</span></h1></a></div>
+				<div class="col-md-6 link_posts_left nopadding"></div>
+				<div class="col-md-6 link_posts_right nopadding"></div>
 			
 	
-				<div class="col-md-12 single-page-sidebar ">
+				<div class="col-md-12 single-page-sidebar nopadding">
 				<div class="col-md-12">
 					<?php  
 							//echo //$post->ID().'<br>';
@@ -137,7 +137,7 @@
 		                      //$active = ($ctr == 0)? 'active' : '';
 		                      echo '<div class="col-md-12 nopadding index-post" > 
 				                        <a href="'.get_permalink().'"> '.$image.'
-				                          <div class="col-md-12">
+				                          <div class="col-md-12 ">
 					                          <h1>'.get_the_title().'</h1>
 					                          <p>'.get_the_excerpt().'</p>           
 				                          </div></a>
